@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:focusableInTouchMode="true"
+    android:layoutDirection="locale">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="32dp"
+            app:cardBackgroundColor="#ffffff"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtGeoFenceBody"
+                    style="@style/DialogFragmentBody"
+                    android:layout_marginTop="@dimen/margin_48dp"
+                    android:fontFamily="@font/cantarell"
+                    android:text="@string/confirm" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_32dp"
+                    android:layout_marginEnd="@dimen/margin_32dp"
+                    android:background="@color/LightGray"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/BodyText"
+                        android:fontFamily="@font/cantarell"
+                        android:text="@string/select_geofence_s_center"
+                        android:textAlignment="textStart" />
+
+                    <Spinner
+                        android:id="@+id/spinnerGeoFenceEntries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:entries="@array/geo_fence_entries"
+                        android:fontFamily="@font/cantarell" />
+
+                </FrameLayout>
+
+
+                <EditText
+                    android:id="@+id/txtGeoFenceDiameter"
+                    style="@style/DialogFragmentEditText"
+                    android:fontFamily="@font/cantarell"
+                    android:hint="@string/diameter_in_meters"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    tools:ignore="Autofill" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:layout_marginBottom="@dimen/margin_8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnCancelSetGeoFence"
+                        style="@style/DialogFragmentButtonCancel"
+                        android:fontFamily="@font/cantarell" />
+
+                    <Button
+                        android:id="@+id/btnSetGeoFence"
+                        style="@style/DialogFragmentButtonOk"
+                        android:fontFamily="@font/cantarell" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            style="@style/DialogFragmentImage"
+            android:src="@drawable/ic_geofence"
+            tools:ignore="ContentDescription" />
+
+    </FrameLayout>
+</LinearLayout>

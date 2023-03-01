@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:gravity="center"
+    android:layoutDirection="locale"
+    android:orientation="vertical"
+    tools:context=".Activities.ParentSignedInActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgParent"
+            android:layout_width="@dimen/circular_image_width_large"
+            android:layout_height="@dimen/circular_image_height_large"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_8dp"
+            android:src="@mipmap/ic_launcher_round"
+            app:civ_border_color="@color/flatui_clouds"
+            app:civ_border_width="@dimen/circular_image_border_large" />
+
+        <TextView
+            android:id="@+id/txtParentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            android:fontFamily="@font/cantarell"
+            android:text="@string/parent_name"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/text_size_20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32dp"
+            android:layout_marginEnd="@dimen/margin_32dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_8dp"
+                android:background="@color/LightGray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_8dp"
+                android:fontFamily="@font/cantarell"
+                android:text="@string/kids"
+                android:textColor="@color/colorTextBlack" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_8dp"
+                android:background="@color/LightGray" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtNoKids"
+            style="@style/TextViewNoElements"
+            android:layout_margin="@dimen/margin_24dp"
+            android:fontFamily="@font/cantarell"
+            android:text="@string/no_kids_added_yet"
+            tools:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewChilds"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
