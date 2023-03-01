@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="flatui_turquoise">#1abc9c</color>
+    <color name="flatui_wet_asphalt">#34495e</color>
+    <color name="flatui_midnight_blue">#2c3e50</color>
+    <color name="flatui_pumpkin">#d35400</color>
+    <color name="flatui_pomegranate">#c0392b</color>
+    <color name="flatui_clouds">#ecf0f1</color>
+    <color name="flatui_silver">#bdc3c7</color>
+    <color name="flatui_asbestos">#7f8c8d</color>
+
+    <color name="colorPrimary">#1abc9c</color>
+    <color name="colorPrimaryDark">#004c8c</color>
+    <color name="ColorAccent">#0277bd</color>
+    <color name="Blue">#00B6FF</color>
+    <color name="LinearBlue">#6ec1e4</color>
+    <color name="LinearGradientGreen">#3CD3AD</color>
+    <color name="DeepPurple">#7c4dff</color>
+    <color name="Yellow">#ffb300</color>
+    <color name="Green">#00bfa5</color>
+    <color name="Pink">#D242EC</color>
+    <color name="Red">#F73E7C</color>
+    <color name="LightGray">#c1c1c1</color>
+    <color name="colorBackground">#413e4f</color>
+    <color name="colorTextHint">#51d8c7</color>
+    <color name="colorTextWhite">#ffffff</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorTextBlack">#000000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="hintTextColor">#424242</color>
+    <color name="colorEditText">#14000000</color>
+    <color name="colorButton">#0E68FF</color>
+    <color name="colorButtonText">#ffffff</color>
+    <color name="colorPlaceholder">#505050</color>
+    <color name="colorTextPrimary">#0E68FF</color>
+
+
+</resources>
