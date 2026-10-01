@@ -76,13 +76,15 @@ public class MainForegroundService extends Service {
     private ScreenTimeReceiver screenTimeReceiver;
     private String uid;
     private String childEmail;
-    private final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    private final DatabaseReference databaseReference = firebaseDatabase.getReference("users");
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
 
 
     @Override
     public void onCreate() {
         super.onCreate();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("users");
         executorService = Executors.newSingleThreadExecutor();
         LockerThread thread = new LockerThread();
         executorService.submit(thread);
@@ -100,7 +102,7 @@ public class MainForegroundService extends Service {
         uid = user.getUid();
 
         Intent notificationIntent = new Intent(this, ChildSignedInActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_MUTABLE);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE);
 
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_kidsafe).setContentIntent(pendingIntent).build();
